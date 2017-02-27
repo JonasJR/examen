@@ -13,8 +13,8 @@ from sklearn import svm
 svc = svm.SVC()
 
 #Then we load the trainingdata from our created file
-data = np.loadtxt("trainingdata.csv", delimiter=',', skiprows=1, usecols=(0,1,2,3))
-target = np.loadtxt("trainingdata.csv", delimiter=',', skiprows=1, usecols=(4))
+data = np.loadtxt("trainingdata.csv", delimiter=',', usecols=(0,1,2,3))
+target = np.loadtxt("trainingdata.csv", delimiter=',', usecols=(4))
 
 #Then we fit (train) the svc with the trainingdata
 svc.fit(data, target)
