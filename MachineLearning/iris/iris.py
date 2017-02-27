@@ -3,6 +3,9 @@ from sklearn import svm
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn import datasets
+#Two lines to ignore an error message about falling back to a gles driver
+import warnings
+warnings.filterwarnings(action="ignore", module="scipy", message="^internal gelsd")
 
 #Load the Iris dataset. This loads ALL the 150 data into the variable iris.
 iris = datasets.load_iris()
@@ -31,7 +34,7 @@ svc_target_pred = svc.predict(test_data)
 linreg_target_pred = linreg.predict(test_data)
 
 #Prints out the results to the screen
-#print("When using SVC: \n" + str(svc_target_pred) + "\n\nWhen using LinearRegression: \n" + str(linreg_target_pred))
+print("When using SVC: \n" + str(svc_target_pred) + "\n\nWhen using LinearRegression: \n" + str(linreg_target_pred))
 
 
 
@@ -61,7 +64,7 @@ sgd.fit(train_data, train_target)
 sgd_target_pred = sgd.predict(test_data)
 sgd_crazy_pred = sgd.predict(crazy_data)
 
-print("Real data: \n" + str(sgd_target_pred) + "\n\nCrazy data: \n" + str(sgd_crazy_pred))
+#print("Real data: \n" + str(sgd_target_pred) + "\n\nCrazy data: \n" + str(sgd_crazy_pred))
 
 #Conclusion:
 #The scikit site have a pretty good knowledge of what algorithms to use, so lets follow
