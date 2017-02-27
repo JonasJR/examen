@@ -1,17 +1,25 @@
 import pandas as pd
 import seaborn as sns
-from sklearn.cross_validation import train_test_split
+import numpy as np
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn import svm
 
-data = pd.read_csv("trainingdata.csv")
+#According to the scikit webpage http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html
+#we should be using the SVC to predict the symmetry since we are predicting a category
+#and we have labeled data and we have labeled data and less than 100K samples.
 
-X = data[['Row1','Row2','Row3','Row4']]
+#So lets load the SVC
+svc = svm.SVC()
 
-y = data['Sym']
+#Then we load the trainingdata from our created file
+data = np.loadtxt("trainingdata.csv", delimiter=',', skiprows=1, usecols=(0,1,2,3))
+target = np.loadtxt("trainingdata.csv", delimiter=',', skiprows=1, usecols=(4))
 
-X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=1)
+#Then we fit (train) the svc with the trainingdata
+svc.fit(data, target)
 
-linreg = LinearRegression()
-linreg.fit(X_train, y_train)
-
-y_pred = linreg.predict(X_test)
+#Lets seee what happens when we predict a new array that we create
+test = np.loadtxt("testingdata.csv", delimiter=',', skiprows=1, usecols=(0,1,2,3))
+pred = svc.predict(test)
+print(pred)
