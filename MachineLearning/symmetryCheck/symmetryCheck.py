@@ -3,6 +3,7 @@ import seaborn as sns
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
+from sklearn import neighbors
 from sklearn import svm
 #Two lines to ignore an error message about falling back to a gles driver
 import warnings
@@ -25,7 +26,7 @@ svc.fit(data, target)
 #Lets seee what happens when we predict a new array that we create
 test = np.loadtxt("testingdata.csv", delimiter=',', skiprows=1, usecols=(0,1,2,3))
 pred = svc.predict(test)
-#print(pred)
+print(pred)
 
 #Well, lets try another one!
 linreg = linear_model.LinearRegression()
@@ -37,4 +38,16 @@ pred2 = linreg.predict(test)
 sgd = linear_model.SGDClassifier()
 sgd.fit(data, target)
 pred3 = sgd.predict(test)
-print(pred3)
+#print(pred3)
+
+#LogisticRegression
+logistic = linear_model.LogisticRegression()
+logistic.fit(data, target)
+pred4 = logistic.predict(test)
+#print(pred4)
+
+#And a last one!
+knn = neighbors.KNeighborsClassifier(n_neighbors=1)
+knn.fit(data, target)
+pred5 = knn.predict(test)
+#print(pred5)
