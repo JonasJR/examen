@@ -15,8 +15,10 @@ iris = datasets.load_iris()
 data = iris.data
 target = iris.target
 
+#Make a curve about the error rate
+size = 0.50
 #We devide it into a training part and a testing part
-train_data, test_data, train_target, test_target = train_test_split(data, target, random_state=1)
+train_data, test_data, train_target, test_target = train_test_split(data, target, random_state=42, test_size=size)
 
 #Loads an SVC (Support Vector Classification) to be used in the learning and classification
 svc = svm.SVC()
@@ -34,8 +36,7 @@ svc_target_pred = svc.predict(test_data)
 linreg_target_pred = linreg.predict(test_data)
 
 #Prints out the results to the screen
-print("When using SVC: \n" + str(svc_target_pred) + "\n\nWhen using LinearRegression: \n" + str(linreg_target_pred))
-
+#print("When using SVC: \n" + str(svc_target_pred) + "\nAnd the true target: \n" + str(test_target))#"\n\nWhen using LinearRegression: \n" + str(linreg_target_pred))
 
 
 
@@ -64,7 +65,7 @@ sgd.fit(train_data, train_target)
 sgd_target_pred = sgd.predict(test_data)
 sgd_crazy_pred = sgd.predict(crazy_data)
 
-#print("Real data: \n" + str(sgd_target_pred) + "\n\nCrazy data: \n" + str(sgd_crazy_pred))
+print("Prediction data: \n" + str(sgd_target_pred) + "\n\True data: \n" + str(test_target))
 
 #Conclusion:
 #The scikit site have a pretty good knowledge of what algorithms to use, so lets follow

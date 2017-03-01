@@ -26,7 +26,7 @@ svc.fit(data, target)
 #Lets seee what happens when we predict a new array that we create
 test = np.loadtxt("testingdata.csv", delimiter=',', skiprows=1, usecols=(0,1,2,3))
 pred = svc.predict(test)
-print(pred)
+#print(pred)
 
 #Well, lets try another one!
 linreg = linear_model.LinearRegression()
@@ -47,7 +47,7 @@ pred4 = logistic.predict(test)
 #print(pred4)
 
 #And a last one!
-knn = neighbors.KNeighborsClassifier(n_neighbors=1)
+knn = neighbors.KNeighborsClassifier(n_neighbors=5)
 knn.fit(data, target)
 pred5 = knn.predict(test)
-#print(pred5)
+print(pred5)
