@@ -2,6 +2,7 @@ import numpy as np
 from sklearn import svm
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
 from sklearn import datasets
 #Two lines to ignore an error message about falling back to a gles driver
 import warnings
@@ -25,6 +26,13 @@ svc = svm.SVC()
 
 #Loads an LinearRegression to be used in the learning and classification for comparing
 linreg = linear_model.LinearRegression()
+
+#Calculate scores
+scoreSVC = cross_val_score(svc, data, target, cv=50)
+scoreLinReg = cross_val_score(linreg, data, target, cv=50)
+print("SVC: \n" + str(scoreSVC))
+print("-------------")
+print("linreg: \n" + str(scoreLinReg))
 
 #Here we place the training data and training target into the svc and linreg. This is where
 #the training is done. After this we can start predicting.
@@ -65,7 +73,7 @@ sgd.fit(train_data, train_target)
 sgd_target_pred = sgd.predict(test_data)
 sgd_crazy_pred = sgd.predict(crazy_data)
 
-print("Prediction data: \n" + str(sgd_target_pred) + "\n\True data: \n" + str(test_target))
+#print("Prediction data: \n" + str(sgd_target_pred) + "\n\True data: \n" + str(test_target))
 
 #Conclusion:
 #The scikit site have a pretty good knowledge of what algorithms to use, so lets follow
