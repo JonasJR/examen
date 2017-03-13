@@ -23,8 +23,8 @@ iris = load_iris()
 data, target = iris.data, iris.target
 #We create the cross validator
 #svc = linear_model.LinearRegression()
-#svc = SVC(kernel='linear', C=1.0)
-svc = tree.DecisionTreeClassifier()
+svc = SVC(kernel='linear', C=1.0)
+#svc = tree.DecisionTreeClassifier()
 
 # To simplify the looping later on I stole some code online that generates an array
 # of "possible divisions" of a given number. So passing in 150 would yeild
@@ -75,36 +75,15 @@ def kFold(n, d):
 #We define a function that gets the score of the kfold
 #we loop through the splits and for each split we
 #calculate the score and create the avarage score
-def getScore(splitData,splitTarget):
+def getScore(data,target,i):
     #First we create a temporary vector to store all scores for later avarage calculation
-    tempScores = []
+    tempScores = cross_val_score(svc,data,target,cv=i)
+    print(tempScores)
     #We loop through the splits
-    for index,i in enumerate(splitData):
-        #We have to store the index for use with the target later
-        #we store the kfold in testData
-        testData = np.asarray(i)
-        #we store all in trainData
-        trainData = splitData
-        #And remove the test data
-        del trainData[index]
-        #And resolve the array
-        trainData = resolve(trainData)
-        #We store the kfold target in target
-        testTarget = np.asarray(splitTarget[index])
-        #store all in target
-        trainTarget = splitTarget
-        #remove the test target
-        del trainTarget[index]
-        trainTarget = resolve(trainTarget)
-        #Now we get the score of the created test and train first learning and then calling the score function
-        svc.fit(trainData,trainTarget)
-        score = svc.score(testData,testTarget)
-        tempScores.append(score)
-        #print(score)
     #Now we just have to get the avarage of the score and then return it
-    #return reduce(lambda x, y: x + y, tempScores) / len(tempScores)
+    return reduce(lambda x, y: x + y, tempScores) / len(tempScores)
     #Test to return lowest score:
-    return min(float(s) for s in tempScores)
+    #return min(float(s) for s in tempScores)
 
 #We define a function that loops through the kfold split array and gets the scores and create a median of it.
 #v is the vector that was split by the kfold function
@@ -112,6 +91,7 @@ def main():
     #here we just get the list of divisors for the looping and remove first and last items
     loop = list(divisorGenerator(len(data)))
     loop.pop(0)
+    loop.pop(len(loop)-1)
     loop.pop(len(loop)-1)
     print(loop)
     #We start with calling the randomize function to make sure that the data is shuffled
@@ -122,14 +102,8 @@ def main():
     #This makes the last iteration create kfold with 2 elements in each group. (2 training data and 148 test data)
     #We start at 2 because 0 and 1 is not possible when doing a kfold
     for i in loop:
-        # for each iteration we call the kFold function with i
-        # to get a split array
-        splitData = kFold(i,data)
-        splitTarget = kFold(i,target)
-        print("i = " + str(i))
-        print(str(splitTarget))
-        #We the get score of the split vector
-        score = getScore(splitData,splitTarget)
+        #We the get cross_val_score of the datase
+        score = getScore(data,target, i)
         #And add the calculated score to the scores vector
         scores.append(score)
         break
@@ -146,7 +120,7 @@ def main():
     #set it to grid style
     plt.grid()
     #set plot for svc and GaussianNB with coloring
-    plt.plot(scores, 'o-', label="DecisionTreeClassifier iris", color="r", linestyle="--")
+    plt.plot(scores, 'o-', label="SVC cross_val_score iris", color="r", linestyle="--")
     #place the label in the top right
     plt.legend(loc="best")
     #show the figure
