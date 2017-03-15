@@ -132,7 +132,6 @@ def main():
         score = getScore(splitData,splitTarget)
         #And add the calculated score to the scores vector
         scores.append(score)
-        break
     #print(scores)
 
     #We create a plt to visualize the curves
@@ -141,12 +140,14 @@ def main():
     #Set title
     plt.title("")
     #set x and y lables
-    plt.xlabel("Size of K-fold")
+    plt.xlabel("Size of K-fold in %")
     plt.ylabel("Score")
     #set it to grid style
     plt.grid()
     #set plot for svc and GaussianNB with coloring
     plt.plot(scores, 'o-', label="DecisionTreeClassifier iris", color="r", linestyle="--")
+    #set the axis to correct values
+    #plt.axis([0,100,0.0,1.0])
     #place the label in the top right
     plt.legend(loc="best")
     #show the figure

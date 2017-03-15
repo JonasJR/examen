@@ -2,4 +2,6 @@
 Ex-jobb... You know it!
 
 To-do:
-Symmetry maker - Ska skapa alla möjliga 4x4 symmetriska rutor. Börja med att skapa alla möjliga 2x4 och sedan skapa deras spegelbilder.
+Hardcoded K-Fold. Gör ett hårdkodat program som delar dataset på K antal delar och tar ut score på dem.
+
+Cross validation. Skriv vidare på programmet och få ut alla algoritmer på samma plot. Med flera olika datasets.

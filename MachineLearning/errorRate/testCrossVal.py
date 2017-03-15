@@ -22,8 +22,8 @@ import random
 iris = load_iris()
 data, target = iris.data, iris.target
 #We create the cross validator
-#svc = linear_model.LinearRegression()
-svc = SVC(kernel='linear', C=1.0)
+svc = linear_model.LinearRegression()
+#svc = SVC(kernel='linear', C=1.0)
 #svc = tree.DecisionTreeClassifier()
 
 # To simplify the looping later on I stole some code online that generates an array
@@ -106,7 +106,7 @@ def main():
         score = getScore(data,target, i)
         #And add the calculated score to the scores vector
         scores.append(score)
-        break
+
     #print(scores)
 
     #We create a plt to visualize the curves
@@ -115,12 +115,14 @@ def main():
     #Set title
     plt.title("")
     #set x and y lables
-    plt.xlabel("Size of K-fold")
+    plt.xlabel("Size of K-fold in %")
     plt.ylabel("Score")
     #set it to grid style
     plt.grid()
     #set plot for svc and GaussianNB with coloring
     plt.plot(scores, 'o-', label="SVC cross_val_score iris", color="r", linestyle="--")
+    #set the axis to correct values
+    #plt.axis([0,100,0.0,1.0])
     #place the label in the top right
     plt.legend(loc="best")
     #show the figure
