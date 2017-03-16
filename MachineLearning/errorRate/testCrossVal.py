@@ -2,6 +2,7 @@ from sklearn.datasets import load_digits, load_iris
 from sklearn.svm import SVC
 from sklearn import tree
 from sklearn import linear_model
+from sklearn import neighbors
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import ShuffleSplit
 from sklearn.model_selection import train_test_split
@@ -10,6 +11,9 @@ from sklearn.naive_bayes import GaussianNB
 import numpy as np
 import math
 import random
+#Two lines to ignore an error message about falling back to a gles driver
+import warnings
+warnings.filterwarnings(action="ignore", module="scipy", message="^internal gelsd")
 
 #########   Note for IVAN!!!!   ############
 # Just an intro to how python works. A python program works kind of like a C-program.
@@ -22,9 +26,12 @@ import random
 iris = load_iris()
 data, target = iris.data, iris.target
 #We create the cross validator
-svc = linear_model.LinearRegression()
-#svc = SVC(kernel='linear', C=1.0)
-#svc = tree.DecisionTreeClassifier()
+linreg = linear_model.LinearRegression()
+svc = SVC(kernel='linear', C=1.0)
+tree = tree.DecisionTreeClassifier()
+sgd = linear_model.SGDClassifier()
+knn = neighbors.KNeighborsClassifier()
+gnb = GaussianNB()
 
 # To simplify the looping later on I stole some code online that generates an array
 # of "possible divisions" of a given number. So passing in 150 would yeild
@@ -54,31 +61,12 @@ def randomize():
     data = data[shuffle]
     target = target[shuffle]
 
-#the data array becomes corrupted when we are mixtering with it (this is where I got stuck)
-#so we have to resolve it so it can be used by the svc.fit()
-#We define a function that resolves the array and returns a usable array
-def resolve(a):
-    temp = []
-    for i in a:
-        for e in i:
-            temp.append(e)
-    return np.asarray(temp)
-
-#We define a function to be used in the k-fold evaluation
-#This function returns a score of the k-fold operation
-#n is the amount of splits and d is the vector that should be split
-def kFold(n, d):
-    #Here we pass an iterator (the dataset) to the zip function n times. Each iteration it pulls an item from the dataset
-    #If n=3 the result is a vector with 3 elements.
-    return zip(*[iter(d)]*n)
-
 #We define a function that gets the score of the kfold
 #we loop through the splits and for each split we
 #calculate the score and create the avarage score
-def getScore(data,target,i):
+def getScore(algorithm,data,target,i):
     #First we create a temporary vector to store all scores for later avarage calculation
-    tempScores = cross_val_score(svc,data,target,cv=i)
-    print(tempScores)
+    tempScores = cross_val_score(algorithm,data,target,cv=i)
     #We loop through the splits
     #Now we just have to get the avarage of the score and then return it
     return reduce(lambda x, y: x + y, tempScores) / len(tempScores)
@@ -94,20 +82,40 @@ def main():
     loop.pop(len(loop)-1)
     loop.pop(len(loop)-1)
     print(loop)
+    temp = []
+    counter = 0
+    for i in loop:
+        temp.append(counter)
+        counter += 1
     #We start with calling the randomize function to make sure that the data is shuffled
     randomize()
     #We create a vector for storing the scores
-    scores = []
+    scores1 = []
+    scores2 = []
+    scores3 = []
+    scores4 = []
+    scores5 = []
+    scores6 = []
+
     #We create a loop that loops through the lenght of the dataset devided by two.
     #This makes the last iteration create kfold with 2 elements in each group. (2 training data and 148 test data)
     #We start at 2 because 0 and 1 is not possible when doing a kfold
     for i in loop:
         #We the get cross_val_score of the datase
-        score = getScore(data,target, i)
-        #And add the calculated score to the scores vector
-        scores.append(score)
+        score1 = getScore(svc,data,target, i)
+        score2 = getScore(linreg,data,target, i)
+        score3 = getScore(tree,data,target, i)
+        score4 = getScore(sgd,data,target, i)
+        score5 = getScore(knn,data,target, i)
+        score6 = getScore(gnb,data,target, i)
 
-    #print(scores)
+        #And add the calculated score to the scores vector
+        scores1.append(score1)
+        scores2.append(score2)
+        scores3.append(score3)
+        scores4.append(score4)
+        scores5.append(score5)
+        scores6.append(score6)
 
     #We create a plt to visualize the curves
     #Create the figure
@@ -115,13 +123,20 @@ def main():
     #Set title
     plt.title("")
     #set x and y lables
-    plt.xlabel("Size of K-fold in %")
+    plt.xlabel("K-fold (number of splits)")
     plt.ylabel("Score")
     #set it to grid style
     plt.grid()
     #set plot for svc and GaussianNB with coloring
-    plt.plot(scores, 'o-', label="SVC cross_val_score iris", color="r", linestyle="--")
+    plt.plot(scores1, 'o-', label="SVC", color="r", linestyle="--")
+    plt.plot(scores2, 'o-', label="LinReg", color="g", linestyle="--")
+    plt.plot(scores3, 'o-', label="Tree", color="b", linestyle="--")
+    plt.plot(scores4, 'o-', label="SGDClassifier", color="black", linestyle="--")
+    plt.plot(scores5, 'o-', label="KNeighborsClassifier", color="grey", linestyle="--")
+    plt.plot(scores6, 'o-', label="GaussianNB", color="pink", linestyle="--")
+
     #set the axis to correct values
+    plt.xticks(temp,loop)
     #plt.axis([0,100,0.0,1.0])
     #place the label in the top right
     plt.legend(loc="best")
@@ -129,4 +144,3 @@ def main():
     plt.show()
 
 main()
-print("done")

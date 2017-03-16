@@ -22,9 +22,9 @@ import random
 iris = load_iris()
 data, target = iris.data, iris.target
 #We create the cross validator
-#svc = linear_model.LinearRegression()
-#svc = SVC(kernel='linear', C=1.0)
-svc = tree.DecisionTreeClassifier()
+linreg = linear_model.LinearRegression()
+svc = SVC(kernel='linear', C=1.0)
+tree = tree.DecisionTreeClassifier()
 
 # To simplify the looping later on I stole some code online that generates an array
 # of "possible divisions" of a given number. So passing in 150 would yeild
