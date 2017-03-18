@@ -20,11 +20,11 @@ data, target = iris.data, iris.target
 data = np.append(data,[data[0],data[1],data[2]],axis=0)
 target = np.append(target,[target[0],target[1],target[2]],axis=0)
 
-X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=0.96, random_state=32)
+X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=0.6, random_state=32)
 tempX_train, tempX_test, tempy_train, tempy_test = train_test_split(X_test,y_test,test_size=0.9,random_state=32)
 #We create the cross validator
 #svc = linear_model.LinearRegression()
-#svc = SVC(kernel='linear', C=1.0)
+svc = SVC(kernel='linear', C=1.0)
 #svc = tree.DecisionTreeClassifier()
 #svc = neighbors.KNeighborsClassifier()
 
@@ -89,8 +89,8 @@ def main():
 svc.fit(X_train,y_train)
 #print(len(y_test))
 print(len(y_train))
-print(y_train)
+#print(y_train)
 print("------")
-print(len(y_test))
+#print(len(y_test))
 #print(y_test)
 print(svc.score(X_test,y_test))

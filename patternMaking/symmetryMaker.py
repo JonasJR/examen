@@ -8,41 +8,41 @@ import random
 #We start with creating a 3D array off all possible combinations in a 2x4 array.
 
 data = ""
-seq = itertools.product("01", repeat=8)
+seq = itertools.product("01", repeat=32)
+f = open('trainingdata.csv', 'w')
 
 #Create a 2x4 array and make the symetry!
 for s in seq:
-    arr = np.fromiter(s, np.int8).reshape(4, 2)
+    arr = np.fromiter(s, np.int8).reshape(8, 4)
     strings = ""
     #loop through the array
     for i in arr:
         #change them to strings
-        temp = "" + str(i[0]) + "" + str(i[1]) + "" + str(i[1])[::-1] + "" + str(i[0])[::-1]
+        temp = "" + str(i[0]) + "," + str(i[1]) + "," + str(i[2]) + "," + str(i[3]) + "," + str(i[3])[::-1] + "," + str(i[2])[::-1] + "," + str(i[1])[::-1] + "," + str(i[0])[::-1]
         #add them to one string with , at end
         strings += temp + ","
         temp = ""
     #adds a 1 for target training and make sure last one does not have the ending ,
     strings += "1"
     #add them to one string
-    data += strings + "\n"
+    #data += strings + "\n"
+    f.write(strings + "\n")
 
-seq2 = itertools.product("01", repeat=8)
+seq2 = itertools.product("01", repeat=32)
 #Just do the same as last time but with non symmetric
 for s in seq2:
-    arr = np.fromiter(s, np.int8).reshape(4, 2)
+    arr = np.fromiter(s, np.int8).reshape(8, 4)
     strings = ""
     #loop through the array
     for i in arr:
         #This time just add random bits
-        temp = "" + str(random.getrandbits(1)) + "" + str(random.getrandbits(1)) + "" + str(random.getrandbits(1)) + "" + str(random.getrandbits(1))
+        temp = "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1))
         #add them to one string with , at end
         strings += temp + ","
         temp = ""
     #adds a 0 for target training and make sure last one does not have the ending ,
     strings += "0"
     #add them to one string
-    data += strings + "\n"
-
-#Save the string to a file
-with open("trainingdata.csv", "wb") as f:
-    f.write(data)
+    #data += strings + "\n"
+    f.write(strings + "\n")
+f.close()
