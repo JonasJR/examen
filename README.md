@@ -2,6 +2,5 @@
 Ex-jobb... You know it!
 
 To-do:
-Hardcoded K-Fold. Gör ett hårdkodat program som delar dataset på K antal delar och tar ut score på dem.
-
-Cross validation. Skriv vidare på programmet och få ut alla algoritmer på samma plot. Med flera olika datasets.
+Skriv program som tar ut score för digitsdataset 5 gånger på varje "nivå". Nivåerna består av: 36,54,90,180,360,540,720,900
+Ta ut Confusion-matrix för varje gång.
