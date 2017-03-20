@@ -1,0 +1,101 @@
+Algoritm: Tree
+
+Train size: 42
+Test size: 8546
+Score: 0.937163585303
+Confusion Matrix: 
+[[3734  537]
+ [   0 4275]]
+
+
+
+Train size: 85
+Test size: 8503
+Score: 0.939550746795
+Confusion Matrix: 
+[[3731  514]
+ [   0 4258]]
+
+
+
+Train size: 128
+Test size: 8460
+Score: 0.968912529551
+Confusion Matrix: 
+[[3954  263]
+ [   0 4243]]
+
+
+
+Train size: 171
+Test size: 8417
+Score: 0.984079838422
+Confusion Matrix: 
+[[4066  134]
+ [   0 4217]]
+
+
+
+Train size: 257
+Test size: 8331
+Score: 0.984155563558
+Confusion Matrix: 
+[[4021  132]
+ [   0 4178]]
+
+
+
+Train size: 429
+Test size: 8159
+Score: 0.997303591126
+Confusion Matrix: 
+[[4046   22]
+ [   0 4091]]
+
+
+
+Train size: 858
+Test size: 7730
+Score: 0.999870633894
+Confusion Matrix: 
+[[3847    1]
+ [   0 3882]]
+
+
+
+Train size: 1717
+Test size: 6871
+Score: 0.999708921554
+Confusion Matrix: 
+[[3424    2]
+ [   0 3445]]
+
+
+
+Train size: 2576
+Test size: 6012
+Score: 0.999667332003
+Confusion Matrix: 
+[[2989    2]
+ [   0 3021]]
+
+
+
+Train size: 3435
+Test size: 5153
+Score: 1.0
+Confusion Matrix: 
+[[2564    0]
+ [   0 2589]]
+
+
+
+Train size: 4294
+Test size: 4294
+Score: 1.0
+Confusion Matrix: 
+[[2166    0]
+ [   0 2128]]
+
+
+

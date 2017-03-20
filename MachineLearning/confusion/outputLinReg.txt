@@ -1,2 +1,0 @@
-Algoritm: Linear Regression
-

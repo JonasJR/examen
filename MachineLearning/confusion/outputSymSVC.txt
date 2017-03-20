@@ -1,0 +1,101 @@
+Algoritm: SVC
+
+Train size: 42
+Test size: 8546
+Score: 0.942195179031
+Confusion Matrix: 
+[[3889  382]
+ [ 112 4163]]
+
+
+
+Train size: 85
+Test size: 8503
+Score: 0.972597906621
+Confusion Matrix: 
+[[4012  233]
+ [   0 4258]]
+
+
+
+Train size: 128
+Test size: 8460
+Score: 0.982860520095
+Confusion Matrix: 
+[[4072  145]
+ [   0 4243]]
+
+
+
+Train size: 171
+Test size: 8417
+Score: 0.984911488654
+Confusion Matrix: 
+[[4073  127]
+ [   0 4217]]
+
+
+
+Train size: 257
+Test size: 8331
+Score: 0.989557075981
+Confusion Matrix: 
+[[4066   87]
+ [   0 4178]]
+
+
+
+Train size: 429
+Test size: 8159
+Score: 0.992891285697
+Confusion Matrix: 
+[[4010   58]
+ [   0 4091]]
+
+
+
+Train size: 858
+Test size: 7730
+Score: 0.994307891332
+Confusion Matrix: 
+[[3804   44]
+ [   0 3882]]
+
+
+
+Train size: 1717
+Test size: 6871
+Score: 0.997671372435
+Confusion Matrix: 
+[[3410   16]
+ [   0 3445]]
+
+
+
+Train size: 2576
+Test size: 6012
+Score: 0.998336660013
+Confusion Matrix: 
+[[2981   10]
+ [   0 3021]]
+
+
+
+Train size: 3435
+Test size: 5153
+Score: 0.998253444595
+Confusion Matrix: 
+[[2555    9]
+ [   0 2589]]
+
+
+
+Train size: 4294
+Test size: 4294
+Score: 0.998835584537
+Confusion Matrix: 
+[[2161    5]
+ [   0 2128]]
+
+
+

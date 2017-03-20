@@ -1,0 +1,101 @@
+Algoritm: KNN
+
+Train size: 42
+Test size: 8546
+Score: 0.808565410718
+Confusion Matrix: 
+[[2657 1614]
+ [  22 4253]]
+
+
+
+Train size: 85
+Test size: 8503
+Score: 0.840291661766
+Confusion Matrix: 
+[[2888 1357]
+ [   1 4257]]
+
+
+
+Train size: 128
+Test size: 8460
+Score: 0.860638297872
+Confusion Matrix: 
+[[3038 1179]
+ [   0 4243]]
+
+
+
+Train size: 171
+Test size: 8417
+Score: 0.837471783296
+Confusion Matrix: 
+[[2832 1368]
+ [   0 4217]]
+
+
+
+Train size: 257
+Test size: 8331
+Score: 0.845516744689
+Confusion Matrix: 
+[[2866 1287]
+ [   0 4178]]
+
+
+
+Train size: 429
+Test size: 8159
+Score: 0.846917514401
+Confusion Matrix: 
+[[2819 1249]
+ [   0 4091]]
+
+
+
+Train size: 858
+Test size: 7730
+Score: 0.858214747736
+Confusion Matrix: 
+[[2752 1096]
+ [   0 3882]]
+
+
+
+Train size: 1717
+Test size: 6871
+Score: 0.863193130549
+Confusion Matrix: 
+[[2486  940]
+ [   0 3445]]
+
+
+
+Train size: 2576
+Test size: 6012
+Score: 0.870425815037
+Confusion Matrix: 
+[[2212  779]
+ [   0 3021]]
+
+
+
+Train size: 3435
+Test size: 5153
+Score: 0.877158936542
+Confusion Matrix: 
+[[1931  633]
+ [   0 2589]]
+
+
+
+Train size: 4294
+Test size: 4294
+Score: 0.878900791803
+Confusion Matrix: 
+[[1646  520]
+ [   0 2128]]
+
+
+
