@@ -51,22 +51,3 @@ for i in loop:
     f.write(str(conf_mat))
     f.write("\n\n\n\n")
 f.close()
-# plt.figure()
-# #Set title
-# plt.title("")
-# #set x and y lables
-# plt.xlabel("size")
-# plt.ylabel("Score")
-# #set it to grid style
-# plt.grid()
-# #set plot for svc and GaussianNB with coloring
-# plt.plot(scores, 'o-', label="SVC", color="r", linestyle="--")
-#
-# #set the axis to correct values
-# xlocks, xlabs = plt.xticks()
-# #plt.xticks(xlocks,size)
-# #plt.axis([0,100,0.0,1.0])
-# #place the label in the top right
-# plt.legend(loc="best")
-# #show the figure
-# plt.show()

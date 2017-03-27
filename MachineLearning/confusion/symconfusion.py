@@ -16,21 +16,21 @@ warnings.filterwarnings(action="ignore", module="scipy", message="^internal gels
 #Print out full arrays
 np.set_printoptions(threshold=np.nan)
 
-data = np.loadtxt("trainingdata.csv", delimiter=',', usecols=(range(0,63)))
-target = np.loadtxt("trainingdata.csv", delimiter=',', usecols=(64))
+data = np.loadtxt("trainingdata6x62.csv", delimiter=',', usecols=(range(0,35)))
+target = np.loadtxt("trainingdata6x62.csv", delimiter=',', usecols=(36))
 
 #We create the algorithm
 #svc = linear_model.LinearRegression()
-#svc = SVC(kernel='linear', C=1.0)
+svc = SVC(kernel='linear', C=1.0)
 #svc = tree.DecisionTreeClassifier()
-svc = neighbors.KNeighborsClassifier()
+#svc = neighbors.KNeighborsClassifier()
 
-f = open('outputSymKNN.txt', 'w')
-f.write("Algoritm: KNN\n\n")
+f = open('NEWoutputSymSVC6x62.txt', 'w')
+f.write("Algoritm: SVC\n\n")
 
 scores = []
 size = []
-loop = [0.995,0.99,0.985,0.98,0.97,0.95,0.9,0.8,0.7,0.6,0.5]
+loop = [0.975,0.75]
 #We create a loop for the process
 for i in loop:
     #We split the data into train and test data.
@@ -48,22 +48,3 @@ for i in loop:
     f.write(str(conf_mat))
     f.write("\n\n\n\n")
 f.close()
-# plt.figure()
-# #Set title
-# plt.title("")
-# #set x and y lables
-# plt.xlabel("size")
-# plt.ylabel("Score")
-# #set it to grid style
-# plt.grid()
-# #set plot for svc and GaussianNB with coloring
-# plt.plot(scores, 'o-', label="SVC", color="r", linestyle="--")
-#
-# #set the axis to correct values
-# xlocks, xlabs = plt.xticks()
-# #plt.xticks(xlocks,size)
-# #plt.axis([0,100,0.0,1.0])
-# #place the label in the top right
-# plt.legend(loc="best")
-# #show the figure
-# plt.show()

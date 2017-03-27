@@ -1,0 +1,20 @@
+Algoritm: Tree
+
+Train size: 50
+Test size: 1950
+Score: 0.616923076923
+Confusion Matrix: 
+[[667 310]
+ [437 536]]
+
+
+
+Train size: 500
+Test size: 1500
+Score: 0.914666666667
+Confusion Matrix: 
+[[688  66]
+ [ 62 684]]
+
+
+

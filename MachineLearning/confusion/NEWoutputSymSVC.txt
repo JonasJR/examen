@@ -1,0 +1,20 @@
+Algoritm: SVC
+
+Train size: 50
+Test size: 1950
+Score: 0.488205128205
+Confusion Matrix: 
+[[434 543]
+ [455 518]]
+
+
+
+Train size: 500
+Test size: 1500
+Score: 0.581333333333
+Confusion Matrix: 
+[[307 447]
+ [181 565]]
+
+
+

@@ -1,0 +1,20 @@
+Algoritm: KNN
+
+Train size: 50
+Test size: 1950
+Score: 0.616923076923
+Confusion Matrix: 
+[[416 561]
+ [186 787]]
+
+
+
+Train size: 500
+Test size: 1500
+Score: 0.772
+Confusion Matrix: 
+[[416 338]
+ [  4 742]]
+
+
+
