@@ -1,20 +1,20 @@
-Algoritm: KNN
+Algoritm: SVC
 
 Train size: 50
-Test size: 1950
-Score: 0.650769230769
+Sym in training: 29 - Not sym in training: 21Test size: 1950
+Score: 0.486153846154
 Confusion Matrix: 
-[[400 577]
- [104 869]]
+[[344 659]
+ [343 604]]
 
 
 
 Train size: 500
-Test size: 1500
-Score: 0.751333333333
+Sym in training: 258 - Not sym in training: 242Test size: 1500
+Score: 0.504666666667
 Confusion Matrix: 
-[[381 373]
- [  0 746]]
+[[365 417]
+ [326 392]]
 
 
 

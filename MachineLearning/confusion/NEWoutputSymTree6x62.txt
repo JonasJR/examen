@@ -1,20 +1,20 @@
-Algoritm: Tree
+Algoritm: SVC
 
 Train size: 50
-Test size: 1950
-Score: 0.744102564103
+Sym in training: 27 - Not sym in training: 23Test size: 1950
+Score: 0.703076923077
 Confusion Matrix: 
-[[599 378]
- [121 852]]
+[[644 333]
+ [246 727]]
 
 
 
 Train size: 500
-Test size: 1500
-Score: 0.924666666667
+Sym in training: 254 - Not sym in training: 246Test size: 1500
+Score: 0.900666666667
 Confusion Matrix: 
-[[675  79]
- [ 34 712]]
+[[673  81]
+ [ 68 678]]
 
 
 

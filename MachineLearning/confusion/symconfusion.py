@@ -16,16 +16,16 @@ warnings.filterwarnings(action="ignore", module="scipy", message="^internal gels
 #Print out full arrays
 np.set_printoptions(threshold=np.nan)
 
-data = np.loadtxt("trainingdata6x62.csv", delimiter=',', usecols=(range(0,35)))
-target = np.loadtxt("trainingdata6x62.csv", delimiter=',', usecols=(36))
+data = np.loadtxt("trainingdata3.csv", delimiter=',', usecols=(range(0,35)))
+target = np.loadtxt("trainingdata3.csv", delimiter=',', usecols=(36))
 
 #We create the algorithm
 #svc = linear_model.LinearRegression()
-svc = SVC(kernel='linear', C=1.0)
-#svc = tree.DecisionTreeClassifier()
+#svc = SVC(kernel='linear', C=1.0)
+svc = tree.DecisionTreeClassifier()
 #svc = neighbors.KNeighborsClassifier()
 
-f = open('NEWoutputSymSVC6x62.txt', 'w')
+f = open('NEWoutputSymTree.txt', 'w')
 f.write("Algoritm: SVC\n\n")
 
 scores = []
@@ -40,8 +40,16 @@ for i in loop:
     true = target_test
     conf_mat = confusion_matrix(true,pred,labels=[0,1])
     #size.append(str(len(target_train)))
+    sym = 0
+    osym = 0
+    for i in target_train:
+        if i == 1:
+            sym += 1
+        else:
+            osym += 1
     scores.append(svc.score(data_test,target_test))
     f.write("Train size: " + str(len(target_train)) + "\n")
+    f.write("Sym in training: " + str(sym) + " - Not sym in training: " + str(osym))
     f.write("Test size: " + str(len(target_test)) + "\n")
     f.write("Score: " + str(svc.score(data_test,target_test)) + "\n")
     f.write("Confusion Matrix: \n")
