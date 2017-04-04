@@ -16,8 +16,8 @@ warnings.filterwarnings(action="ignore", module="scipy", message="^internal gels
 #Print out full arrays
 np.set_printoptions(threshold=np.nan)
 
-data = np.loadtxt("dubblesym8x8.csv", delimiter=',', usecols=(range(0,63)))
-target = np.loadtxt("dubblesym8x8.csv", delimiter=',', usecols=(64))
+data = np.loadtxt("dubblesym6x6.csv", delimiter=',', usecols=(range(0,35)))
+target = np.loadtxt("dubblesym6x6.csv", delimiter=',', usecols=(36))
 
 #We create the algorithm
 #svc = linear_model.LinearRegression()
@@ -25,7 +25,7 @@ target = np.loadtxt("dubblesym8x8.csv", delimiter=',', usecols=(64))
 svc = tree.DecisionTreeClassifier()
 #svc = neighbors.KNeighborsClassifier()
 
-f = open('8x8.txt', 'w')
+f = open('6x6.txt', 'w')
 f.write("Algoritm: DecisionTreeClassifier\n\n")
 
 scores = []

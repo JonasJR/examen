@@ -8,36 +8,26 @@ import time
 #Here we want to create all possible symmetric 4x4 images
 #We start with creating a 3D array off all possible combinations in a 2x4 array.
 
-data = ""
-seq = itertools.product("01", repeat=9)
-f = open('dubblesymandsym6x6.csv', 'w')
-#Create a 2x4 array and make the symetry!
-stringsarr = []
-start = time.time()
-counter = 0
-for i in seq:
-    arr = np.fromiter(i, np.int8).reshape(3, 3)
-    strings = ""
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[0]), str(i[1]), str(i[2]), str(i[2]), str(i[1]), str(i[0]))
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[3]), str(i[4]), str(i[5]), str(i[5]), str(i[4]), str(i[3]))
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[6]), str(i[7]), str(i[8]), str(i[8]), str(i[7]), str(i[6]))
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[6]), str(i[7]), str(i[8]), str(i[8]), str(i[7]), str(i[6]))
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[3]), str(i[4]), str(i[5]), str(i[5]), str(i[4]), str(i[3]))
-    strings += "%s,%s,%s,%s,%s,%s," % (str(i[0]), str(i[1]), str(i[2]), str(i[2]), str(i[1]), str(i[0]))
-    strings += "2"
-    stringsarr.append(strings)
-    #print("1: "+str(time.time() - start))
-    counter += 1
-    if counter == 512:
-        break
-random.shuffle(stringsarr)
-for i in stringsarr:
-    f.write(i + "\n")
+
+f = open('trainingdata6x6dubbel.csv', 'w')
+
+for i in range(256):
+    matrix = [[random.getrandbits(1) for x in range(3)] for y in range(3)]
+    string = ""
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[0][0]), str(matrix[0][1]), str(matrix[0][2]), str(matrix[0][2]), str(matrix[0][1]), str(matrix[0][0]))
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[1][0]), str(matrix[1][1]), str(matrix[1][2]), str(matrix[1][2]), str(matrix[1][1]), str(matrix[1][0]))
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[2][0]), str(matrix[2][1]), str(matrix[2][2]), str(matrix[2][2]), str(matrix[2][1]), str(matrix[2][0]))
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[2][0]), str(matrix[2][1]), str(matrix[2][2]), str(matrix[2][2]), str(matrix[2][1]), str(matrix[2][0]))
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[1][0]), str(matrix[1][1]), str(matrix[1][2]), str(matrix[1][2]), str(matrix[1][1]), str(matrix[1][0]))
+    string += "%s,%s,%s,%s,%s,%s," % (str(matrix[0][0]), str(matrix[0][1]), str(matrix[0][2]), str(matrix[0][2]), str(matrix[0][1]), str(matrix[0][0]))
+    string += "2"
+    f.write(string + "\n")
 
 
 data = ""
 seq = itertools.product("01", repeat=18)
 #Create a 2x4 array and make the symetry!
+counter = 0
 start = time.time()
 counter = 0
 for i in seq:
@@ -52,9 +42,9 @@ for i in seq:
         temp = ""
     strings += "1"
     f.write(strings + "\n")
-    #print("1: "+str(time.time() - start))
+    print("1: "+str(time.time() - start))
     counter += 1
-    if counter == 512:
+    if counter == 1000:
         break
 
 print("0 started!!!!!")
@@ -76,8 +66,8 @@ for i in seq2:
         temp = ""
     strings += "0"
     f.write(strings + "\n")
-    #print("0: "+str(time.time() - start))
+    print("0: "+str(time.time() - start))
     c += 1
-    if c == 512:
+    if c == 1000:
         break
 f.close()

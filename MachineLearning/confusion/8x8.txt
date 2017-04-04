@@ -1,0 +1,82 @@
+Algoritm: DecisionTreeClassifier
+
+Train size: 50
+Dubsym in training: 27
+Sym in training: 0 
+Not sym in training: 23
+Test size: 1950
+Score: 0.706153846154
+Confusion Matrix: 
+[[840 137]
+ [436 537]]
+
+
+
+Train size: 500
+Dubsym in training: 254
+Sym in training: 0 
+Not sym in training: 246
+Test size: 1500
+Score: 0.984666666667
+Confusion Matrix: 
+[[731  23]
+ [  0 746]]
+
+
+
+-------------------------------------------
+
+Algoritm: KNN
+
+Train size: 50
+Dubsym in training: 27
+Sym in training: 0 
+Not sym in training: 23
+Test size: 1950
+Score: 0.685641025641
+Confusion Matrix: 
+[[412 565]
+ [ 48 925]]
+
+
+
+Train size: 500
+Dubsym in training: 254
+Sym in training: 0 
+Not sym in training: 246
+Test size: 1500
+Score: 0.791333333333
+Confusion Matrix: 
+[[441 313]
+ [  0 746]]
+
+
+
+-------------------------------------------
+
+Algoritm: SVC
+
+Train size: 50
+Dubsym in training: 27
+Sym in training: 0 
+Not sym in training: 23
+Test size: 1950
+Score: 0.509230769231
+Confusion Matrix: 
+[[360 617]
+ [340 633]]
+
+
+
+Train size: 500
+Dubsym in training: 254
+Sym in training: 0 
+Not sym in training: 246
+Test size: 1500
+Score: 0.64
+Confusion Matrix: 
+[[214 540]
+ [  0 746]]
+
+
+
