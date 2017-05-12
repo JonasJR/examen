@@ -1,0 +1,1203 @@
+Algoritm: KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=5, p=2,
+           weights='uniform')
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.995348837209
+Confusion Matrix: 
+[[  5   1]
+ [  0 209]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.762790697674
+Confusion Matrix: 
+[[164  51]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.790697674419
+Confusion Matrix: 
+[[170  45]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.795348837209
+Confusion Matrix: 
+[[171  44]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.753488372093
+Confusion Matrix: 
+[[162  53]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.795348837209
+Confusion Matrix: 
+[[171  44]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.8
+Confusion Matrix: 
+[[172  43]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.795348837209
+Confusion Matrix: 
+[[171  44]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.823255813953
+Confusion Matrix: 
+[[177  38]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.742990654206
+Confusion Matrix: 
+[[159  55]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.766355140187
+Confusion Matrix: 
+[[164  50]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.780373831776
+Confusion Matrix: 
+[[167  47]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.771028037383
+Confusion Matrix: 
+[[165  49]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.808411214953
+Confusion Matrix: 
+[[173  41]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.752336448598
+Confusion Matrix: 
+[[161  53]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.81308411215
+Confusion Matrix: 
+[[174  40]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.808411214953
+Confusion Matrix: 
+[[173  41]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.696261682243
+Confusion Matrix: 
+[[149  65]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.775700934579
+Confusion Matrix: 
+[[166  48]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.724299065421
+Confusion Matrix: 
+[[155  59]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.775700934579
+Confusion Matrix: 
+[[166  48]
+ [  0   0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 1.0
+Confusion Matrix: 
+[[   0    0]
+ [   0 2147]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 1.0
+Confusion Matrix: 
+[[   0    0]
+ [   0 2147]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.674429436423
+Confusion Matrix: 
+[[1448  699]
+ [   0    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.648812296227
+Confusion Matrix: 
+[[1393  754]
+ [   0    0]]
+
+
+
+Algoritm: DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_split=1e-07, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter='best')
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  6   0]
+ [  0 209]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.995348837209
+Confusion Matrix: 
+[[214   1]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.995327102804
+Confusion Matrix: 
+[[213   1]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.0
+Confusion Matrix: 
+[[   0    0]
+ [2147    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.0
+Confusion Matrix: 
+[[   0    0]
+ [2147    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.999534233815
+Confusion Matrix: 
+[[2146    1]
+ [   0    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.999534233815
+Confusion Matrix: 
+[[2146    1]
+ [   0    0]]
+
+
+
+Algoritm: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma='auto', kernel='linear',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  0   0]
+ [  0 215]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[  6   0]
+ [  0 209]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.995348837209
+Confusion Matrix: 
+[[214   1]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.995348837209
+Confusion Matrix: 
+[[214   1]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 0.995348837209
+Confusion Matrix: 
+[[214   1]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8373
+Test size: 215
+Score: 1.0
+Confusion Matrix: 
+[[215   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.995327102804
+Confusion Matrix: 
+[[213   1]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.995327102804
+Confusion Matrix: 
+[[213   1]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.995327102804
+Confusion Matrix: 
+[[213   1]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 0.990654205607
+Confusion Matrix: 
+[[212   2]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 8374
+Test size: 214
+Score: 1.0
+Confusion Matrix: 
+[[214   0]
+ [  0   0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.0
+Confusion Matrix: 
+[[   0    0]
+ [2147    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.0
+Confusion Matrix: 
+[[   0    0]
+ [2147    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.997671169073
+Confusion Matrix: 
+[[2142    5]
+ [   0    0]]
+
+
+
+Train size: 6441
+Test size: 2147
+Score: 0.995808104332
+Confusion Matrix: 
+[[2138    9]
+ [   0    0]]
+
+
+

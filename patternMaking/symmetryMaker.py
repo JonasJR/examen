@@ -22,22 +22,17 @@ for s in seq:
         #loop through the array
         for i in arr:
             #change them to strings
-            #temp = "" + str(i[0]) + "," + str(i[1]) + "," + str(i[2]) + "," + str(i[3]) + "," + str(i[3])[::-1] + "," + str(i[2])[::-1] + "," + str(i[1])[::-1] + "," + str(i[0])[::-1]
             temp = "%s,%s,%s,%s,%s,%s,%s,%s," % (str(i[0]),str(i[1]),str(i[2]),str(i[3]),str(i[3])[::-1],str(i[2])[::-1],str(i[1])[::-1],str(i[0])[::-1])
             #add them to one string with , at end
             strings += temp
-            #strings = strings.join(temp)
             temp = ""
         #adds a 1 for target training and make sure last one does not have the ending ,
         strings += "1"
-        #strings = strings.join("1")
         #add them to one string
-        #data += strings + "\n"
         f.write(strings + "\n")
         counter = 0
         print("1: "+str(time.time() - start))
 
-print("0 started!!!!!")
 seq2 = itertools.product("01", repeat=32)
 #Just do the same as last time but with non symmetric
 c = 0
@@ -49,17 +44,13 @@ for s in seq2:
         #loop through the array
         for i in arr:
             #This time just add random bits
-            #temp = "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1)) + "," + str(random.getrandbits(1))
             temp =  "%s,%s,%s,%s,%s,%s,%s,%s," % (str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)),str(random.getrandbits(1)))
             #add them to one string with , at end
             strings += temp
-            #strings = strings.join(temp)
             temp = ""
         #adds a 0 for target training and make sure last one does not have the ending ,
         strings += "0"
-        #strings = strings.join("0")
         #add them to one string
-        #data += strings + "\n"
         f.write(strings + "\n")
         c = 0
         print("0: "+str(time.time() - start))
