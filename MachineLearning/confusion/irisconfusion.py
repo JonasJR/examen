@@ -19,19 +19,25 @@ np.set_printoptions(threshold=np.nan)
 iris = load_iris()
 data = iris.data
 target = iris.target
-
+c = 0
+for i in target:
+    if i == 0:
+        c += 1
+        print(str(c))
+        data = np.delete(data, np.where(target==i), 0)
+        target = np.delete(target, np.where(target==i), 0)
 #We create the algorithm
 #svc = linear_model.LinearRegression()
 #svc = SVC(kernel='linear', C=1.0)
 svc = tree.DecisionTreeClassifier()
 #svc = neighbors.KNeighborsClassifier()
 
-f = open('iris.txt', 'w')
+f = open('irisno0-2.txt', 'w')
 f.write("Algoritm: DecisionTreeClassifier\n\n")
 
 scores = []
 size = []
-loop = [0.96,0.89]
+loop = [0.95,0.9]
 #We create a loop for the process
 for i in loop:
     #We split the data into train and test data.
@@ -39,7 +45,7 @@ for i in loop:
     svc.fit(data_train,target_train)
     pred = svc.predict(data_test)
     true = target_test
-    conf_mat = confusion_matrix(true,pred,labels=[0,1,2])
+    conf_mat = confusion_matrix(true,pred,labels=[1,2])
     #size.append(str(len(target_train)))
     sym = 0
     osym = 0
@@ -53,7 +59,7 @@ for i in loop:
             osym += 1
     scores.append(svc.score(data_test,target_test))
     f.write("Train size: " + str(len(target_train)) + "\n")
-    f.write("Target 1 in training: " + str(dubsym) + "\nTarget 2 in training: " + str(sym) + " \nTarget 3 in training: " + str(osym) + "\n")
+    f.write("Target 0 in training: " + str(osym) + "\nTarget 1 in training: " + str(sym) + " \nTarget 2 in training: " + str(dubsym) + "\n")
     f.write("Test size: " + str(len(target_test)) + "\n")
     f.write("Score: " + str(svc.score(data_test,target_test)) + "\n")
     f.write("Confusion Matrix: \n")
@@ -66,7 +72,7 @@ svc = neighbors.KNeighborsClassifier()
 f.write("Algoritm: KNN\n\n")
 scores = []
 size = []
-loop = [0.96,0.89]
+loop = [0.95,0.9]
 #We create a loop for the process
 for i in loop:
     #We split the data into train and test data.
@@ -74,7 +80,7 @@ for i in loop:
     svc.fit(data_train,target_train)
     pred = svc.predict(data_test)
     true = target_test
-    conf_mat = confusion_matrix(true,pred,labels=[0,1,2])
+    conf_mat = confusion_matrix(true,pred,labels=[1,2])
     #size.append(str(len(target_train)))
     sym = 0
     osym = 0
@@ -88,7 +94,7 @@ for i in loop:
             osym += 1
     scores.append(svc.score(data_test,target_test))
     f.write("Train size: " + str(len(target_train)) + "\n")
-    f.write("Target 1 in training: " + str(dubsym) + "\nTarget 2 in training: " + str(sym) + " \nTarget 3 in training: " + str(osym) + "\n")
+    f.write("Target 0 in training: " + str(osym) + "\nTarget 1 in training: " + str(sym) + " \nTarget 2 in training: " + str(dubsym) + "\n")
     f.write("Test size: " + str(len(target_test)) + "\n")
     f.write("Score: " + str(svc.score(data_test,target_test)) + "\n")
     f.write("Confusion Matrix: \n")
@@ -101,7 +107,7 @@ svc = SVC(kernel='linear', C=1.0)
 f.write("Algoritm: SVC\n\n")
 scores = []
 size = []
-loop = [0.96,0.89]
+loop = [0.95,0.9]
 #We create a loop for the process
 for i in loop:
     #We split the data into train and test data.
@@ -109,7 +115,7 @@ for i in loop:
     svc.fit(data_train,target_train)
     pred = svc.predict(data_test)
     true = target_test
-    conf_mat = confusion_matrix(true,pred,labels=[0,1,2])
+    conf_mat = confusion_matrix(true,pred,labels=[1,2])
     #size.append(str(len(target_train)))
     sym = 0
     osym = 0
@@ -123,7 +129,7 @@ for i in loop:
             osym += 1
     scores.append(svc.score(data_test,target_test))
     f.write("Train size: " + str(len(target_train)) + "\n")
-    f.write("Target 1 in training: " + str(dubsym) + "\nTarget 2 in training: " + str(sym) + " \nTarget 3 in training: " + str(osym) + "\n")
+    f.write("Target 0 in training: " + str(osym) + "\nTarget 1 in training: " + str(sym) + " \nTarget 2 in training: " + str(dubsym) + "\n")
     f.write("Test size: " + str(len(target_test)) + "\n")
     f.write("Score: " + str(svc.score(data_test,target_test)) + "\n")
     f.write("Confusion Matrix: \n")

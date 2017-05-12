@@ -20,13 +20,13 @@ data = np.loadtxt("dubblesym8x8.csv", delimiter=',', usecols=(range(0,63)))
 target = np.loadtxt("dubblesym8x8.csv", delimiter=',', usecols=(64))
 
 #We create the algorithm
-#svc = linear_model.LinearRegression()
+svc = linear_model.LinearRegression()
 #svc = SVC(kernel='linear', C=1.0)
-svc = tree.DecisionTreeClassifier()
+#svc = tree.DecisionTreeClassifier()
 #svc = neighbors.KNeighborsClassifier()
 
-f = open('8x8.txt', 'w')
-f.write("Algoritm: DecisionTreeClassifier\n\n")
+f = open('NEWTEST.txt', 'w')
+f.write("Algoritm: LinReg\n\n")
 
 scores = []
 size = []
