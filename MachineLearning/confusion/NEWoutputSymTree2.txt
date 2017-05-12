@@ -1,0 +1,20 @@
+Algoritm: SVC
+
+Train size: 50
+Sym in training: 29 - Not sym in training: 21Test size: 1950
+Score: 0.472307692308
+Confusion Matrix: 
+[[327 676]
+ [353 594]]
+
+
+
+Train size: 500
+Sym in training: 258 - Not sym in training: 242Test size: 1500
+Score: 0.501333333333
+Confusion Matrix: 
+[[404 378]
+ [370 348]]
+
+
+

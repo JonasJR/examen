@@ -1,5 +1,6 @@
-string = ""
-for i in range(0,4294967296):
-    string = ""
+from sklearn import datasets
 
-print("Done!")
+digits = datasets.load_digits()
+temp = str(len(digits.target))
+
+print(temp)

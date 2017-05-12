@@ -1,0 +1,82 @@
+Algoritm: DecisionTreeClassifier
+
+Train size: 5
+Target 0 in training: 0
+Target 1 in training: 2 
+Target 2 in training: 3
+Test size: 95
+Score: 0.694736842105
+Confusion Matrix: 
+[[28 20]
+ [ 9 38]]
+
+
+
+Train size: 10
+Target 0 in training: 0
+Target 1 in training: 4 
+Target 2 in training: 6
+Test size: 90
+Score: 0.911111111111
+Confusion Matrix: 
+[[41  5]
+ [ 3 41]]
+
+
+
+-------------------------------------------
+
+Algoritm: KNN
+
+Train size: 5
+Target 0 in training: 0
+Target 1 in training: 2 
+Target 2 in training: 3
+Test size: 95
+Score: 0.494736842105
+Confusion Matrix: 
+[[ 0 48]
+ [ 0 47]]
+
+
+
+Train size: 10
+Target 0 in training: 0
+Target 1 in training: 4 
+Target 2 in training: 6
+Test size: 90
+Score: 0.8
+Confusion Matrix: 
+[[29 17]
+ [ 1 43]]
+
+
+
+-------------------------------------------
+
+Algoritm: SVC
+
+Train size: 5
+Target 0 in training: 0
+Target 1 in training: 2 
+Target 2 in training: 3
+Test size: 95
+Score: 0.863157894737
+Confusion Matrix: 
+[[41  7]
+ [ 6 41]]
+
+
+
+Train size: 10
+Target 0 in training: 0
+Target 1 in training: 4 
+Target 2 in training: 6
+Test size: 90
+Score: 0.744444444444
+Confusion Matrix: 
+[[24 22]
+ [ 1 43]]
+
+
+
